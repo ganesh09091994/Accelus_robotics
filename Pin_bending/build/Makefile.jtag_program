@@ -1,0 +1,223 @@
+# Hey Emacs, this is a -*- makefile -*-
+#
+# Auto-create OpenOCD cfg and script
+# by Martin Thomas, Kaiserslautern, Germany 
+# eversmith(at)heizung-thomas(dot)de
+#############################################
+#
+# Example for LPC1768 internal flash
+#
+# THIS HAS BEEN TESTED WITH OPENOCD 207(something...)
+# in newer versions of OpenOCD some commands are not
+# longer available and have been replaced
+#Used by amit...
+OOCD_comment=for LPC1768 internal flash
+
+#ifndef OOCD_load_image
+#OOCD_load_image=main.bin
+#$(warning OOCD_load_image not defined - using default $(OOCD_load_image) )
+#endif
+
+# filename for the OpenOCD-config:
+OOCD_CFG=oocd.cfg
+# filename for the OpenOCD-reset-script:
+OOCD_SCRIPT=oocd.script
+
+# Location OpenOCD executeables 
+# for my precompiled package - all in one
+OOCD_INSTALLDIR= c:/Work/ARMTools/openocd-0.4.0/bin
+#OOCD_BIN_FTDI=$(OOCD_INSTALLDIR)/openocd.exe
+OOCD_BIN_FTDI= openocd.exe
+OOCD_BIN_PP=openocd.exe
+# for Michael Fischers precompiled package (separat)
+#OOCD_INSTALLDIR=C:/Programme/openocd-2006re100/bin
+#OOCD_BIN_FTDI=$(OOCD_INSTALLDIR)/openocd-ftd2xx.exe
+#OOCD_BIN_PP=$(OOCD_INSTALLDIR)/openocd-pp.exe
+
+# JTAG hardware interface
+## Type
+OOCD_INTERFACE=FTDI
+#OOCD_INTERFACE=PARPORT
+
+ifeq ($(OOCD_INTERFACE),FTDI)
+OOCD_BIN=$(OOCD_BIN_FTDI)
+else
+OOCD_BIN=$(OOCD_BIN_PP)
+endif
+
+## settings FT2232 based devices
+OOCD_ft2232_device_desc=NGX JTAG A
+OOCD_ft2232_layout=oocdlink
+OOCD_ft2232_vid_pid=0x0403 0x6010
+
+## settings for parport devices ("Wigglers")
+OOCD_parport_port=0x378"
+OOCD_parport_cable=wiggler"
+
+# JTAG speed and reset-delay settings
+#OOCD_jtag_speed=0
+## in [ms]:
+OOCD_jtag_nsrst_delay=200
+OOCD_jtag_ntrst_delay=200
+OOCD_run_and_halt_time="0 30"
+
+OOCD_reset_config=trst_and_srst srst_pulls_trst
+#OOCD_reset_config=trst_and_srst  separate
+#srst_pulls_trst
+#OOCE_reset_config="srst_only srst_pulls_trst"
+OOCD_jtag_device= "0x4b 0xa0 0x04 0x77"
+#  "4 0x1 0xf 0xe"
+OOCD_daemon_startup=reset
+OOCD_target=cortex_m3 little run_and_init 0 cortex_m3
+#OOCD_target=cortex_m3 little run_and_init 0 cortex_m3
+OOCD_target_script=0 reset $(OOCD_SCRIPT)
+
+OOCD_working_area_start=0x2000C000
+OOCD_working_area_size=0x4000
+OOCD_working_area=0 $(OOCD_working_area_start) \
+	$(OOCD_working_area_size) nobackup
+
+OOCD_bank=0
+
+OOCD_flash_bank_pref=str7x
+OOCD_flash_bank_start=0x40000000
+OOCD_flash_bank_size=0x00040000
+# for OpenOCD up to SVN188: 
+OOCD_flash_bank_suf=0 0 STR71x 0
+# from SVN189:
+#OOCD_flash_bank_suf=0 0 0 STR71x 
+OOCD_flash_bank=$(OOCD_flash_bank_pref) $(OOCD_flash_bank_start) \
+	$(OOCD_flash_bank_size) $(OOCD_flash_bank_suf)
+	
+OOCD_cfg_opt_line1=""
+OOCD_cfg_opt_line2=""
+OOCD_cfg_opt_line3=""
+
+###
+
+OOCD_script_pre1=arm7_9 dcc_downloads enable
+OOCD_script_pre2=wait_halt
+OOCD_script_pre3=sleep 10
+OOCD_script_pre4=""
+OOCD_script_pre5=""
+
+OOCD_script_flash_probe=flash probe $(OOCD_bank)
+# optional after probe before erase (unprotect etc.)
+OOCD_script_optprep1=""
+OOCD_script_optprep2=""
+
+OOCD_script_flash_erase_first=0
+OOCD_script_flash_erase_last=4
+OOCD_script_flash_erase=flash erase $(OOCD_bank) \
+	$(OOCD_script_flash_erase_first) $(OOCD_script_flash_erase_last)
+## new versions
+##OOCD_script_flash_erase=flash erase_sector $(OOCD_bank) \
+##	$(OOCD_script_flash_erase_first) $(OOCD_script_flash_erase_last)
+
+OOCD_script_flash_write_offset=0
+# using the deprecated flash write command:
+OOCD_script_flash_write=flash write $(OOCD_bank) \
+	$(OOCD_load_image) $(OOCD_script_flash_write_offset)
+# "new" command:
+#OOCD_script_flash_write=flash write_binary $(OOCD_bank) \
+#	$(OOCD_load_image) $(OOCD_script_flash_write_offset)
+
+# even "newer" command
+#OOCD_script_flash_write=flash write_bank $(OOCD_bank) \
+#	$(OOCD_load_image) $(OOCD_script_flash_write_offset)
+
+	
+OOCD_script_suf1=reset run
+OOCD_script_suf2=sleep 10
+OOCD_script_suf3=""
+OOCD_script_suf4=""
+OOCD_script_suf5=""
+
+#Additonal options passed to the OpenOCD executable
+#OOCD_OPTIONS=-d 2
+OOCD_OPTIONS=
+
+####################################################################
+
+#oocd_program: oocd_programprepare oocd_programdoit
+
+oocd_programprepare:
+	@echo "Generating OpenOCD config ($(OOCD_comment))..."
+	@echo # generated OpenOCD config (Amits Generator) > $(OOCD_CFG)
+	@echo # $(OOCD_comment) >> $(OOCD_CFG)
+	@echo telnet_port 4444 >> $(OOCD_CFG)
+	@echo gdb_port 3333 >> $(OOCD_CFG)
+	
+	@echo set  _CHIPNAME lpc1768 >> $(OOCD_CFG)
+	@echo set  _ENDIAN little  >> $(OOCD_CFG)
+	@echo set _CPUTAPID 0x4f1f0f0f  >> $(OOCD_CFG)
+	@echo set _CCLK 4000 >> $(OOCD_CFG)
+	
+ifeq ($(OOCD_INTERFACE),FTDI)
+	@echo interface ft2232 >> $(OOCD_CFG)
+	@echo ft2232_device_desc "$(OOCD_ft2232_device_desc)" >> $(OOCD_CFG)
+	@echo ft2232_layout $(OOCD_ft2232_layout) >> $(OOCD_CFG)
+	@echo ft2232_vid_pid $(OOCD_ft2232_vid_pid) >> $(OOCD_CFG)
+else
+	@echo interface parport >> $(OOCD_CFG)
+	@echo parport_port $(OOCD_parport_port) >> $(OOCD_CFG)
+	@echo parport_cable $(OOCD_parport_cable) >> $(OOCD_CFG)
+endif
+
+	@echo jtag_rclk 500 >> $(OOCD_CFG)
+	@echo jtag_nsrst_delay $(OOCD_jtag_nsrst_delay) >> $(OOCD_CFG)
+	@echo jtag_ntrst_delay $(OOCD_jtag_ntrst_delay) >> $(OOCD_CFG)
+
+	@echo reset_config $(OOCD_reset_config) >> $(OOCD_CFG)
+	
+	@echo jtag newtap "$$_CHIPNAME" cpu -irlen 4 -ircapture 0x1 -irmask 0xf -expected-id $$_CPUTAPID >> $(OOCD_CFG)
+
+	@echo set _TARGETNAME $$_CHIPNAME.cpu >> $(OOCD_CFG)
+	@echo target create $$_TARGETNAME cortex_m3 -endian $$_ENDIAN -chain-position $$_TARGETNAME -variant cortex_m3 >> $(OOCD_CFG)
+	
+	@echo $$_TARGETNAME configure -work-area-phys 0x40000000 -work-area-size 0x4000 -work-area-backup 0 >> $(OOCD_CFG)
+	
+	@echo $$_TARGETNAME configure -event reset-init { >> $(OOCD_CFG)
+	@echo arm core_state arm >> $(OOCD_CFG)
+	@echo  mwb 0xE01FC040 0x01 >> $(OOCD_CFG)
+	@echo } >> $(OOCD_CFG)
+	
+	@echo set _FLASHNAME $$_CHIPNAME.flash >> $(OOCD_CFG)
+	@echo flash bank $$_FLASHNAME lpc2000 0x0 0x7d000 0 0 $$_TARGETNAME lpc2000_v2 14765 calc_checksum >> $(OOCD_CFG)
+
+	@echo init >> $(OOCD_CFG)
+	
+	@echo reset init >> $(OOCD_CFG)
+	
+	@echo flash write_image erase $(OOCD_load_image) 0 ihex >> $(OOCD_CFG)
+	
+	@echo resume 0 >> $(OOCD_CFG)
+	
+	@echo shutdown >> $(OOCD_CFG)
+	
+oocd_programdoit: $(TARGET).hex
+	@echo "Flashing with OpenOCD ($(OOCD_comment))..."
+	@echo ***************************
+	@echo Writing $(TARGET).hex
+	@echo ***************************
+	$(OOCD_BIN) $(OOCD_OPTIONS) -f $(OOCD_CFG)
+	
+# set the load-file name to be used (i.e. if target=main, 
+# the load-file programmed with openocd is main.bin)
+#OOCD_load_image=$(TARGET).hex
+
+# include the OpenOCD "file-generator" targets
+#include oocd_flashing.mk
+
+# the applications program target
+# on make program first the load-file gets build thru the dependency, 
+# then the OpenOCD configuration-script and reset-script gets created 
+# by calling the oocd_programprepare target defined in oocd_flashing.mk 
+# and finaly OpenOCD gets called thru the oocd_programdoit target as 
+# defined in oocd_flashing.mk
+#program : oocd_programprepare oocd_programdoit 
+# This could be used to just start the programming without creating the files
+# (i.e. if they have already been created by a previous run and the 
+# setup has not been changed (comment the previous program target line an
+# uncomment the following:
+#program : $(TARGET).bin oocd_programdoit	

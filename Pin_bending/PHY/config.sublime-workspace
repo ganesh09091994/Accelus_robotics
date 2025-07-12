@@ -1,0 +1,400 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"to",
+				"toggle"
+			],
+			[
+				"SM_DE",
+				"SM_Deaccel_stop"
+			],
+			[
+				"tem",
+				"temp_int"
+			],
+			[
+				"IMA",
+				"IMARK_7"
+			],
+			[
+				"inc",
+				"include"
+			],
+			[
+				"moto",
+				"motor_num"
+			],
+			[
+				"stop",
+				"stop_distance"
+			],
+			[
+				"home",
+				"home_dir"
+			],
+			[
+				"ret",
+				"return"
+			],
+			[
+				"ui",
+				"unsigned"
+			],
+			[
+				"stepp",
+				"stepper_steps"
+			],
+			[
+				"cou",
+				"count_enable"
+			],
+			[
+				"accuma",
+				"accumulator"
+			],
+			[
+				"de",
+				"default"
+			],
+			[
+				"nu",
+				"numberofDataBytesToFollow"
+			],
+			[
+				"TC",
+				"TCP_RX_BUF"
+			],
+			[
+				"fr",
+				"frame"
+			],
+			[
+				"add",
+				"address"
+			],
+			[
+				"in",
+				"index"
+			],
+			[
+				"mem",
+				"memset"
+			],
+			[
+				"get",
+				"getPacket"
+			],
+			[
+				"buffe",
+				"bufferSize"
+			],
+			[
+				"bu",
+				"bufferSize"
+			],
+			[
+				"def",
+				"define"
+			],
+			[
+				"stee",
+				"stepper_init"
+			],
+			[
+				"multi",
+				"multi-steppers"
+			],
+			[
+				"t",
+				"t2_data"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/Vishal_Projects/Date_18_08_2018/4R_PUMA-squareSM/build/Makefile",
+		"/D/Vishal_Projects/Date_18_08_2018/4R_PUMA-squareSM/boards/LPC1769/GRAVITY_2_1.h",
+		"/D/Vishal_Projects/Date_18_08_2018/4R_PUMA-squareSM/RDM/main.cpp",
+		"/D/Vishal_Projects/Date_18_08_2018/4R_PUMA-squareSM/RDM/global.h",
+		"/D/Vishal_Projects/Date_18_08_2018/4R_PUMA-squareSM/RDM/config_data.h",
+		"/D/Vishal_Projects/Date_18_08_2018/4R_PUMA-squareSM/RDM/state_machines/SM_4R_Puma.cpp",
+		"/D/Vishal_Projects/Date_18_08_2018/4R_PUMA-squareSM/RDM/menus/menu_play.cpp",
+		"/D/Vishal_Projects/Date_18_08_2018/4R_PUMA-squareSM/RDM/menus/menu_play.h",
+		"/D/Vishal_Projects/Date_18_08_2018/4R_PUMA-squareSM/RDM/config_data.cpp",
+		"/D/Vishal_Projects/Date_18_08_2018/4R_PUMA-squareSM/RDM/config.h",
+		"/D/amit/gannaJuice/PHY/state_machines/SM_Osc.cpp",
+		"/D/Vishal_Projects/testing codes/MODBUS_TCP_FOR_PACMAC/Imark_ConveyorWithTCPV6_8_imark6_8_modbusUpdated/build/Makefile",
+		"/D/Vishal_Projects/testing codes/MODBUS_TCP_FOR_PACMAC/Imark_ConveyorWithTCPV6_8_imark6_8_modbusUpdated/boards/LPC1769/LAN8720_1.h",
+		"/D/Vishal_Projects/testing codes/MODBUS_TCP_FOR_PACMAC/Imark_ConveyorWithTCPV6_8_imark6_8_modbusUpdated/utils/modbus_tcp/easyweb.c",
+		"/D/Vishal_Projects/testing codes/MODBUS_TCP_FOR_PACMAC/Imark_ConveyorWithTCPV6_8_imark6_8_modbusUpdated/PHY/main.cpp",
+		"/D/Vishal_Projects/testing codes/MODBUS_TCP_FOR_PACMAC/Imark_ConveyorWithTCPV6_8_imark6_8_modbusUpdated/PHY/menus/menu_debug.cpp",
+		"/D/Vishal_Projects/testing codes/MODBUS_TCP_FOR_PACMAC/Imark_ConveyorWithTCPV6_8_imark6_8_modbusUpdated/PHY/config_data.cpp",
+		"/D/Vishal_Projects/testing codes/MODBUS_TCP_FOR_PACMAC/Imark_ConveyorWithTCPV6_8_imark6_8_modbusUpdated/PHY/config.h",
+		"/D/Vishal_Projects/testing codes/MODBUS_TCP_FOR_PACMAC/Imark_ConveyorWithTCPV6_8_imark6_8_modbusUpdated/utils/multi-steppers/multi-steppers.c",
+		"/D/Vishal_Projects/testing codes/MODBUS_TCP_FOR_PACMAC/Imark_ConveyorWithTCPV6_8_imark6_8_modbusUpdated/utils/multi-steppers/multi-steppers.h",
+		"/D/Vishal_Projects/testing codes/MODBUS_TCP_FOR_PACMAC/Imark_ConveyorWithTCPV6_8_imark6_8_modbusUpdated/utils/input_output/input_output.c",
+		"/D/Vishal_Projects/testing codes/MODBUS_TCP_FOR_PACMAC/Imark_ConveyorWithTCPV6_8_imark6_8_modbusUpdated/utils/input_output/input_output.h",
+		"/D/Vishal_Projects/testing codes/MODBUS_TCP_FOR_PACMAC/Imark_ConveyorWithTCPV6_8_imark6_8_modbusUpdated/utils/modbus/SimpleModbusSlave_1769.cpp",
+		"/D/Vishal_Projects/testing codes/MODBUS_TCP_FOR_PACMAC/Imark_ConveyorWithTCPV6_8_imark6_8_modbusUpdated/PHY/global.h",
+		"/D/Vishal_Projects/pacmacDeployed/Imark_ConveyorV6_8/PHY/main.cpp",
+		"/H/pacmac stickers/Imark_ConveyorV6_8_imark7_1_modbusUpdated/PHY/main.cpp",
+		"/D/Vishal_Projects/testing codes/MODBUS_TCP_FOR_PACMAC/Imark_ConveyorWithTCPV6_8_imark6_8_modbusUpdated/build/main.bin",
+		"/D/Vishal_Projects/testing codes/MODBUS_TCP_FOR_PACMAC/Imark_ConveyorWithTCPV6_8_imark6_8_modbusUpdated/utils/input_output_MCP/input_output.c",
+		"/D/Vishal_Projects/lpc1768_modbus_TCP/LPC1768_Xplorer_schematic.pdf",
+		"/D/Vishal_Projects/testing codes/Pacmac_TubeFill_working_New_Modbus/Pacmac_TubeFill_compatible_with_6.8_7_7.1/PHY/state_machines/SM_Tube_Fill.cpp",
+		"/D/Vishal_Projects/testing codes/Pacmac_TubeFill3333v7/PHY/state_machines/SM_Tube_Fill.cpp",
+		"/D/Vishal_Projects/testing codes/pacmac_enableV7.1/Imark_ConveyorV6_3_modbusUpdated/utils/sevensegment/sevensegmentdisplay_1769.cpp",
+		"/D/Vishal_Projects/testing codes/3R-A-incrementalZDrill/BootloaderForGravity2.1/src/sbl_iap.c",
+		"/D/Vishal_Projects/testing codes/3R-A-incrementalZDrill/BootloaderForGravity2.1/src/sbl_config.h",
+		"/D/Vishal_Projects/testing codes/BobFirmware/build/Makefile",
+		"/D/Vishal_Projects/testing codes/pacmac_enableV7.1/Imark_ConveyorV6_3_modbusUpdated/PHY/state_machines/SM_Combined_Rev.h",
+		"/D/Vishal_Projects/testing codes/pacmac_enableV7.1/Imark_ConveyorV6_3_modbusUpdated_with_negative_offset/PHY/state_machines/SM_Combined_Rev.cpp",
+		"/D/Vishal_Projects/testing codes/pacmac_enableV7.1/Imark_ConveyorV6_3_modbusUpdated/PHY/menus/menu_display_int.cpp",
+		"/D/Vishal_Projects/testing codes/pacmac_enableV7.1/Imark_ConveyorV6_3_modbusUpdated/utils/multi-steppers/multi-steppers.c",
+		"/D/Vishal_Projects/testing codes/pacmac_enableV7.1/Imark_ConveyorV6_3_modbusUpdated/PHY/config.h",
+		"/D/Vishal_Projects/testing codes/pacmac_enableV7.1/Imark_ConveyorV6_3_modbusUpdated/drivers/uart/uart.h",
+		"/D/Vishal_Projects/testing codes/pacmac_enableV7.1/Imark_ConveyorV6_3_modbusUpdated/drivers/uart/uart.c",
+		"/D/Vishal_Projects/testing codes/pacmac_enableV7.1/Imark_ConveyorV6_3_modbusUpdated/PHY/config_data.cpp",
+		"/D/Vishal_Projects/testing codes/pacmac_enableV7.1/Imark_ConveyorV6_3_modbusUpdated/PHY/config_data.h",
+		"/D/Vishal_Projects/testing codes/pacmac_enableV7.1/Imark_ConveyorV6_3_modbusUpdated/PHY/menus/menu_signed_int_entry.cpp",
+		"/D/Vishal_Projects/testing codes/pacmac_enableV7.1/Imark_ConveyorV6_3_modbusUpdated/PHY/menus/menu_de_acc_entry.cpp",
+		"/D/Vishal_Projects/testing codes/pacmac_enableV7.1/Imark_ConveyorV6_3_modbusUpdated/boards/LPC1769/IMARK_7.h",
+		"/D/Vishal_Projects/testing codes/pacmac_enableV7.1/Imark_ConveyorV6_3_modbusUpdated/boards/LPC1769/IMARK_6_3.h",
+		"/D/Vishal_Projects/testing codes/pacmac_enableV7.1/Imark_ConveyorV6_3_modbusUpdated/PHY/state_machines/SM_Combined_Rev.cpp",
+		"/D/Vishal_Projects/testing codes/pacmac_enableV7.1/Imark_ConveyorV6_3_modbusUpdated/utils/modbus/modbus.h",
+		"/D/Vishal_Projects/testing codes/Pacmac_TubeFill3333v7/PHY/state_machines/SM_Tube_Fill.h",
+		"/D/Vishal_Projects/testing codes/Pacmac_TubeFill3333v7/PHY/menus/menu_int_entry.cpp",
+		"/D/Vishal_Projects/testing codes/Pacmac_TubeFill333333333333333/common/Core/CM3/system_LPC17xx.c",
+		"/D/Vishal_Projects/testing codes/ImarkIndividualSM_SoftUp_tcp/PHY/config_data.h",
+		"/D/Vishal_Projects/testing codes/ImarkIndividualSM_SoftUp_tcp/utils/i2ceeprom/i2c_eeprom.c",
+		"/D/Vishal_Projects/testing codes/ImarkIndividualSM_SoftUp_tcp/PHY/global.h",
+		"/D/Vishal_Projects/testing codes/ImarkIndividualSM_SoftUp_tcp/common/src/debug_frmwrk.c",
+		"/D/Vishal_Projects/testing codes/ImarkIndividualSM_SoftUp_tcp/common/inc/debug_frmwrk.h",
+		"/D/Vishal_Projects/testing codes/ImarkIndividualSM_SoftUp_tcp/PHY/config_data.cpp",
+		"/D/Vishal_Projects/testing codes/ImarkIndividualSM_SoftUp_tcp/utils/modbus/SimpleModbusSlave_1769.cpp",
+		"/D/Vishal_Projects/testing codes/ImarkIndividualSM_SoftUp_tcp/utils/modbus_tcp/modbusApp.cpp",
+		"/D/Vishal_Projects/testing codes/ImarkIndividualSM_SoftUp_tcp/PHY/state_machines/SM_Combined_Rev.cpp",
+		"/D/Vishal_Projects/testing codes/ImarkIndividualSM_SoftUp_tcp/utils/modbus/modbus.c",
+		"/D/Vishal_Projects/testing codes/ImarkIndividualSM_SoftUp_tcp/utils/multi-steppers/multi-steppers.h",
+		"/D/Vishal_Projects/testing codes/ImarkIndividualSM_SoftUp_tcp/PHY/main.cpp",
+		"/D/Vishal_Projects/testing codes/ImarkIndividualSM_SoftUp_tcp/PHY/state_machines/SM_Combined.cpp",
+		"/D/Vishal_Projects/testing codes/ImarkIndividualSM_SoftUp_tcp/boards/LPC1769/LAN8720_1.h",
+		"/D/Vishal_Projects/testing codes/ImarkIndividualSM_SoftUp_tcp/utils/multi-steppers/multi-stepper-ports.h",
+		"/D/Vishal_Projects/testing codes/ImarkIndividualSM_SoftUp_tcp/PHY/config.h",
+		"/D/Vishal_Projects/testing codes/ImarkIndividualSM_SoftUp_tcp/utils/input_output/input_output.c",
+		"/D/Vishal_Projects/testing codes/ImarkIndividualSM_SoftUp_tcp/utils/multi-steppers/multi-steppers.c",
+		"/D/Vishal_Projects/testing codes/ImarkIndividualSM_SoftUp_tcp/utils/modbus/SimpleModbusSlave_1769.h",
+		"/D/Vishal_Projects/testing codes/ImarkIndividualSM_SoftUp_tcp/utils/modbus/modbus.h",
+		"/D/Vishal_Projects/testing codes/ImarkIndividualSM_SoftUp_tcp/drivers/uart/uart.c",
+		"/D/Vishal_Projects/testing codes/ImarkIndividualSM_SoftUp_tcp/PHY/menus/menu_int_entry.h",
+		"/D/Vishal_Projects/testing codes/ImarkIndividualSM_SoftUp_tcp/build/Makefile",
+		"/D/Vishal_Projects/testing codes/ImarkIndividualSM_SoftUp_tcp/boards/board.h",
+		"/D/Vishal_Projects/testing codes/ImarkIndividualSM_SoftUp_tcp/utils/sevensegment/sevensegmentdisplay_1769.cpp",
+		"/D/Vishal_Projects/testing codes/ImarkIndividualSM_SoftUp_tcp/common/src/lpc17xx_gpio.c",
+		"/D/Vishal_Projects/testing codes/ImarkIndividualSM_SoftUp_tcp/common/inc/lpc17xx_gpio.h",
+		"/D/Vishal_Projects/testing codes/ImarkIndividualSM_SoftUp_tcp/boards/LPC1769/IMARK_6_3.h",
+		"/D/Vishal_Projects/testing codes/Imark_ConveyorV6_3_modbusUpdatedV7/utils/multi-steppers/multi-steppers.c",
+		"/D/Vishal_Projects/testing codes/Imark_ConveyorV6_3_modbusUpdatedV7/drivers/uart/uart.lst",
+		"/D/Vishal_Projects/testing codes/Imark_ConveyorV6_3_modbusUpdatedV7/utils/modbus/SimpleModbusSlave_1769.lst",
+		"/D/Vishal_Projects/testing codes/Imark_ConveyorV6_3_modbusUpdatedV7/build/main.elf",
+		"/D/Vishal_Projects/testing codes/Imark_ConveyorV6_3_modbusUpdatedV7/build/main.bin",
+		"/D/Vishal_Projects/testing codes/Imark_ConveyorV6_3_modbusUpdatedV7/build/main.map",
+		"/D/Vishal_Projects/testing codes/Imark_ConveyorV6_3_modbusUpdatedV7/utils/multi-steppers/multi-steppers.lst",
+		"/D/Vishal_Projects/testing codes/Imark_ConveyorV6_3_modbusUpdatedV7/PHY/global.h",
+		"/D/Vishal_Projects/testing codes/Imark_ConveyorV6_3_modbusUpdatedV7/BootloaderForPACMAC/src/CDL/LPC17xxLib/inc/lpc17xx_uart.h",
+		"/D/Vishal_Projects/testing codes/Imark_ConveyorV6_3_modbusUpdatedV7/common/Core/CM3/core_cm3.h",
+		"/D/Vishal_Projects/testing codes/Imark_ConveyorV6_3_modbusUpdatedV7/common/Core/CM3/LPC17xx.h",
+		"/D/Vishal_Projects/testing codes/Imark_ConveyorV6_3_modbusUpdatedV7/drivers/uart/uart.h",
+		"/D/Vishal_Projects/testing codes/Imark_ConveyorV6_3_modbusUpdatedV7/drivers/uart/uart.c",
+		"/D/Vishal_Projects/testing codes/Imark_ConveyorV6_3_modbusUpdatedV7/BootloaderForPACMAC/example/startup.c",
+		"/D/Vishal_Projects/wanhao3dPrinter/grbl-Mega-1.1f.20170802/grbl/limits.c",
+		"/D/Vishal_Projects/wanhao3dPrinter/grbl-Mega-1.1f.20170802/grbl/gcode.c",
+		"/D/Vishal_Projects/testing codes/lpc1768_modbus_TCP/utils/modbus_tcp/tcpip.c",
+		"/D/Vishal_Projects/testing codes/lpc1768_modbus_TCP/utils/modbus_tcp/tcpip.h",
+		"/D/Vishal_Projects/testing codes/lpc1768_modbus_TCP/utils/modbus_tcp/easyweb.c",
+		"/D/Vishal_Projects/testing codes/lpc1768_modbus_TCP/utils/multi-steppers/multi-steppers.c",
+		"/D/Vishal_Projects/testing codes/lpc1768_modbus_TCP/utils/modbus_tcp/easyweb.h",
+		"/D/Vishal_Projects/lpc1768_modbus_TCP/TCPIPServer.py",
+		"/D/Vishal_Projects/lpc1768_modbus_TCP/utils/multi-steppers/multi-steppers.c",
+		"/D/Vishal_Projects/Imark_ConveyorV6_3_modbusUpdated/build/Makefile",
+		"/D/Vishal_Projects/lpc1768_modbus_TCP/build/Makefile",
+		"/D/Vishal_Projects/lpc1768_modbus_TCP/PHY/main.cpp",
+		"/D/Vishal_Projects/lpc1768_modbus_TCP/utils/input_output/input_output.c",
+		"/D/Vishal_Projects/lpc1768_modbus_TCP/PHY/state_machines/SM_SPI.c",
+		"/D/Vishal_Projects/lpc1768_modbus_TCP/utils/multi-steppers/multi-steppers.h",
+		"/D/Vishal_Projects/lpc1768_modbus_TCP/PHY/config_data.h",
+		"/D/Vishal_Projects/lpc1768_modbus_TCP/utils/modbus_tcp/easyweb.c",
+		"/D/Vishal_Projects/lpc1768_modbus_TCP/utils/modbus_tcp/tcpip.c",
+		"/D/Vishal_Projects/lpc1768_modbus_TCP/BootloaderForPACMAC/src/sbl_iap.c",
+		"/D/Vishal_Projects/lpc1768_modbus_TCP/BootloaderForPACMAC/src/sbl_config.h",
+		"/D/Vishal_Projects/BobFirmware/PHY/state_machines/SM_Mcpc.cpp",
+		"/D/Vishal_Projects/BobFirmware/boards/LPC1769/BOB_V_1_2.h",
+		"/D/Vishal_Projects/BobFirmware/utils/input_output/input_output.c",
+		"/D/Vishal_Projects/BobFirmware/utils/crc16/crc16.cpp",
+		"/D/Vishal_Projects/BobFirmware/common/Core/CM3/system_LPC17xx.c",
+		"/D/Vishal_Projects/BobFirmware/PHY/main.cpp",
+		"/D/Vishal_Projects/BobFirmware/build/Makefile",
+		"/D/Vishal_Projects/BobFirmware/common/src/lpc17xx_uart.c",
+		"/D/Vishal_Projects/BobFirmware/drivers/uart/uart.c",
+		"/D/Vishal_Projects/Imark_ConveyorV6_2_3Feb16/common/Core/CM3/system_LPC17xx.c",
+		"/D/jagir_codes/BobFirmware/PHY/state_machines/SM_Mcpc.cpp",
+		"/D/jagir_codes/BobFirmware/drivers/uart/uart.c",
+		"/D/Vishal_Projects/BobFirmware/common/Core/CM3/system_LPC17xx.h"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 218.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 36.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "config.sublime-project",
+	"replace":
+	{
+		"height": 68.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 223.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

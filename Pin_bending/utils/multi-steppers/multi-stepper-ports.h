@@ -1,0 +1,244 @@
+#ifndef _MULTI_STEPPER_PORTS_H_
+#define _MULTI_STEPPER_PORTS_H_
+
+#include "board.h"
+
+#define MOTOR_PORT0_SET		LPC_GPIO0 -> FIOSET
+#define MOTOR_PORT0_CLR		LPC_GPIO0 -> FIOCLR
+#define MOTOR_PORT0_DIR		LPC_GPIO0 -> FIODIR
+
+#define MOTOR_PORT1_SET		LPC_GPIO1 -> FIOSET
+#define MOTOR_PORT1_CLR		LPC_GPIO1 -> FIOCLR
+#define MOTOR_PORT1_DIR		LPC_GPIO1 -> FIODIR
+
+#define MOTOR_PORT2_SET		LPC_GPIO2 -> FIOSET
+#define MOTOR_PORT2_CLR		LPC_GPIO2 -> FIOCLR
+#define MOTOR_PORT2_DIR		LPC_GPIO2 -> FIODIR
+
+#define MOTOR_PORT3_SET		LPC_GPIO3 -> FIOSET
+#define MOTOR_PORT3_CLR		LPC_GPIO3 -> FIOCLR
+#define MOTOR_PORT3_DIR		LPC_GPIO3 -> FIODIR
+
+#define MULTI_STEPPERS_DIFFERENT_PORTS
+	#ifdef MULTI_STEPPERS_DIFFERENT_PORTS
+/**#########################################################################################*/	
+			#define PULSE_PORT1 		MOTOR1_PULSE_PORT
+			#define PULSE_PIN_OFFSET1	MOTOR1_PULSE_PIN
+			#define PULSE_PIN_SHIFT1   	(1<<MOTOR1_PULSE_PIN)
+			#define DIR_PORT1			MOTOR1_DIR_PORT
+			#define DIR_PIN_OFFSET1		MOTOR1_DIR_PIN
+			#define DIR_PIN_SHIFT1     	(1<<MOTOR1_DIR_PIN)		
+			
+		#if PULSE_PORT1 == 1
+			#define PULSE_PORT_SET1		MOTOR_PORT1_SET
+			#define PULSE_PORT_CLEAR1	MOTOR_PORT1_CLR
+			#define PULSE_PORT_DIR1		MOTOR_PORT1_DIR
+		#elif PULSE_PORT1 == 2
+			#define PULSE_PORT_SET1		MOTOR_PORT2_SET
+			#define PULSE_PORT_CLEAR1	MOTOR_PORT2_CLR
+			#define PULSE_PORT_DIR1		MOTOR_PORT2_DIR
+		#elif PULSE_PORT1 == 3
+			#define PULSE_PORT_SET1		MOTOR_PORT3_SET
+			#define PULSE_PORT_CLEAR1	MOTOR_PORT3_CLR
+			#define PULSE_PORT_DIR1		MOTOR_PORT3_DIR
+		#else
+			#define PULSE_PORT_SET1		MOTOR_PORT0_SET
+			#define PULSE_PORT_CLEAR1	MOTOR_PORT0_CLR
+			#define PULSE_PORT_DIR1		MOTOR_PORT0_DIR
+		#endif
+		
+		#if DIR_PORT1 == 1
+			#define DIR_PORT_SET1		MOTOR_PORT1_SET
+			#define DIR_PORT_CLEAR1		MOTOR_PORT1_CLR
+			#define DIR_PORT_DIR1		MOTOR_PORT1_DIR
+		#elif DIR_PORT1 == 2
+			#define DIR_PORT_SET1		MOTOR_PORT2_SET
+			#define DIR_PORT_CLEAR1		MOTOR_PORT2_CLR
+			#define DIR_PORT_DIR1		MOTOR_PORT2_DIR
+		#elif DIR_PORT1 == 3
+			#define DIR_PORT_SET1		MOTOR_PORT3_SET
+			#define DIR_PORT_CLEAR1		MOTOR_PORT3_CLR
+			#define DIR_PORT_DIR1		MOTOR_PORT3_DIR
+		#else
+			#define DIR_PORT_SET1		MOTOR_PORT0_SET
+			#define DIR_PORT_CLEAR1		MOTOR_PORT0_CLR
+			#define DIR_PORT_DIR1		MOTOR_PORT0_DIR		
+		#endif	
+/**#########################################################################################*/
+			#define PULSE_PORT2 		MOTOR2_PULSE_PORT
+			#define PULSE_PIN_OFFSET2	MOTOR2_PULSE_PIN
+			#define PULSE_PIN_SHIFT2   	(1<<MOTOR2_PULSE_PIN)
+			#define DIR_PORT2			MOTOR2_DIR_PORT
+			#define DIR_PIN_OFFSET2		MOTOR2_DIR_PIN
+			#define DIR_PIN_SHIFT2     	(1<<MOTOR2_DIR_PIN)		
+			
+		#if PULSE_PORT2 == 1
+			#define PULSE_PORT_SET2		MOTOR_PORT1_SET
+			#define PULSE_PORT_CLEAR2	MOTOR_PORT1_CLR
+			#define PULSE_PORT_DIR2		MOTOR_PORT1_DIR
+        #elif PULSE_PORT2 == 2
+  			#define PULSE_PORT_SET2		MOTOR_PORT2_SET
+			#define PULSE_PORT_CLEAR2	MOTOR_PORT2_CLR
+			#define PULSE_PORT_DIR2		MOTOR_PORT2_DIR
+		#elif PULSE_PORT2 == 3
+  			#define PULSE_PORT_SET2		MOTOR_PORT3_SET
+			#define PULSE_PORT_CLEAR2	MOTOR_PORT3_CLR
+			#define PULSE_PORT_DIR2		MOTOR_PORT3_DIR
+		#else
+			#define PULSE_PORT_SET2		MOTOR_PORT0_SET
+			#define PULSE_PORT_CLEAR2	MOTOR_PORT0_CLR
+			#define PULSE_PORT_DIR2		MOTOR_PORT0_DIR
+		#endif
+		
+		#if DIR_PORT2 == 1
+			#define DIR_PORT_SET2		MOTOR_PORT1_SET
+			#define DIR_PORT_CLEAR2		MOTOR_PORT1_CLR
+			#define DIR_PORT_DIR2		MOTOR_PORT1_DIR
+		#elif DIR_PORT2 == 2
+			#define DIR_PORT_SET2		MOTOR_PORT2_SET
+			#define DIR_PORT_CLEAR2		MOTOR_PORT2_CLR
+			#define DIR_PORT_DIR2		MOTOR_PORT2_DIR
+		#elif DIR_PORT2 == 3
+			#define DIR_PORT_SET2		MOTOR_PORT3_SET
+			#define DIR_PORT_CLEAR2		MOTOR_PORT3_CLR
+			#define DIR_PORT_DIR2		MOTOR_PORT3_DIR
+		#else
+			#define DIR_PORT_SET2		MOTOR_PORT0_SET
+			#define DIR_PORT_CLEAR2		MOTOR_PORT0_CLR
+			#define DIR_PORT_DIR2		MOTOR_PORT0_DIR		
+		#endif		
+/**#########################################################################################*/
+			#define PULSE_PORT3 		MOTOR3_PULSE_PORT
+			#define PULSE_PIN_OFFSET3	MOTOR3_PULSE_PIN
+			#define PULSE_PIN_SHIFT3   	(1<<MOTOR3_PULSE_PIN)
+			#define DIR_PORT3			MOTOR3_DIR_PORT
+			#define DIR_PIN_OFFSET3		MOTOR3_DIR_PIN
+			#define DIR_PIN_SHIFT3     	(1<<MOTOR3_DIR_PIN)		
+			
+		#if PULSE_PORT3 == 1
+			#define PULSE_PORT_SET3		MOTOR_PORT1_SET
+			#define PULSE_PORT_CLEAR3	MOTOR_PORT1_CLR
+			#define PULSE_PORT_DIR3		MOTOR_PORT1_DIR
+		#elif PULSE_PORT3 == 2
+			#define PULSE_PORT_SET3		MOTOR_PORT2_SET
+			#define PULSE_PORT_CLEAR3	MOTOR_PORT2_CLR
+			#define PULSE_PORT_DIR3		MOTOR_PORT2_DIR
+		#elif PULSE_PORT3 == 3
+			#define PULSE_PORT_SET3		MOTOR_PORT3_SET
+			#define PULSE_PORT_CLEAR3	MOTOR_PORT3_CLR
+			#define PULSE_PORT_DIR3		MOTOR_PORT3_DIR
+		#else
+			#define PULSE_PORT_SET3		MOTOR_PORT0_SET
+			#define PULSE_PORT_CLEAR3	MOTOR_PORT0_CLR
+			#define PULSE_PORT_DIR3		MOTOR_PORT0_DIR
+		#endif
+		
+		#if DIR_PORT3 == 1
+			#define DIR_PORT_SET3		MOTOR_PORT1_SET
+			#define DIR_PORT_CLEAR3		MOTOR_PORT1_CLR
+			#define DIR_PORT_DIR3		MOTOR_PORT1_DIR
+        #elif DIR_PORT3 == 2
+			#define DIR_PORT_SET3		MOTOR_PORT2_SET
+			#define DIR_PORT_CLEAR3		MOTOR_PORT2_CLR
+			#define DIR_PORT_DIR3		MOTOR_PORT2_DIR
+        #elif DIR_PORT3 == 3
+			#define DIR_PORT_SET3		MOTOR_PORT3_SET
+			#define DIR_PORT_CLEAR3		MOTOR_PORT3_CLR
+			#define DIR_PORT_DIR3		MOTOR_PORT3_DIR
+		#else
+			#define DIR_PORT_SET3		MOTOR_PORT0_SET
+			#define DIR_PORT_CLEAR3		MOTOR_PORT0_CLR
+			#define DIR_PORT_DIR3		MOTOR_PORT0_DIR		
+		#endif		
+/**#########################################################################################*/
+			#define PULSE_PORT4 		MOTOR4_PULSE_PORT
+			#define PULSE_PIN_OFFSET4	MOTOR4_PULSE_PIN
+			#define PULSE_PIN_SHIFT4   	(1<<MOTOR4_PULSE_PIN)
+			#define DIR_PORT4			MOTOR4_DIR_PORT
+			#define DIR_PIN_OFFSET4		MOTOR4_DIR_PIN
+			#define DIR_PIN_SHIFT4     	(1<<MOTOR4_DIR_PIN)		
+			
+		#if PULSE_PORT4 == 1
+			#define PULSE_PORT_SET4		MOTOR_PORT1_SET
+			#define PULSE_PORT_CLEAR4	MOTOR_PORT1_CLR
+			#define PULSE_PORT_DIR4		MOTOR_PORT1_DIR
+ 		#elif PULSE_PORT4 == 2
+			#define PULSE_PORT_SET4		MOTOR_PORT2_SET
+			#define PULSE_PORT_CLEAR4	MOTOR_PORT2_CLR
+			#define PULSE_PORT_DIR4		MOTOR_PORT2_DIR
+		#elif PULSE_PORT4 == 1
+			#define PULSE_PORT_SET4		MOTOR_PORT3_SET
+			#define PULSE_PORT_CLEAR4	MOTOR_PORT3_CLR
+			#define PULSE_PORT_DIR4		MOTOR_PORT3_DIR
+		#else
+			#define PULSE_PORT_SET4		MOTOR_PORT0_SET
+			#define PULSE_PORT_CLEAR4	MOTOR_PORT0_CLR
+			#define PULSE_PORT_DIR4		MOTOR_PORT0_DIR
+		#endif
+		
+		#if DIR_PORT4 == 1
+			#define DIR_PORT_SET4		MOTOR_PORT1_SET
+			#define DIR_PORT_CLEAR4		MOTOR_PORT1_CLR
+			#define DIR_PORT_DIR4		MOTOR_PORT1_DIR
+		#elif DIR_PORT4 == 2
+			#define DIR_PORT_SET4		MOTOR_PORT2_SET
+			#define DIR_PORT_CLEAR4		MOTOR_PORT2_CLR
+			#define DIR_PORT_DIR4		MOTOR_PORT2_DIR
+		#elif DIR_PORT4 == 3
+			#define DIR_PORT_SET4		MOTOR_PORT3_SET
+			#define DIR_PORT_CLEAR4		MOTOR_PORT3_CLR
+			#define DIR_PORT_DIR4		MOTOR_PORT3_DIR
+		#else
+			#define DIR_PORT_SET4		MOTOR_PORT0_SET
+			#define DIR_PORT_CLEAR4		MOTOR_PORT0_CLR
+			#define DIR_PORT_DIR4		MOTOR_PORT0_DIR		
+		#endif		
+/**#########################################################################################*/
+		
+	#else
+/**#########################################################################################*/
+			#define PULSE_PORT			MOTOR1_PULSE_PORT
+			#define PULSE_PIN_OFFSET	MOTOR1_PULSE_PIN
+			#define PULSE_PIN_SHIFT	   	(1<<MOTOR1_PULSE_PIN)
+			#define DIR_PORT			MOTOR1_DIR_PORT
+			#define DIR_PIN_OFFSET		MOTOR1_DIR_PIN
+			#define DIR_PIN_SHIFT		(1<<MOTOR1_DIR_PIN)		
+			
+		#if PULSE_PORT == 1
+			#define PULSE_PORT_SET		MOTOR_PORT1_SET
+			#define PULSE_PORT_CLEAR	MOTOR_PORT1_CLR
+			#define PULSE_PORT_DIR		MOTOR_PORT1_DIR
+        #elif PULSE_PORT == 2
+			#define PULSE_PORT_SET		MOTOR_PORT2_SET
+			#define PULSE_PORT_CLEAR	MOTOR_PORT2_CLR
+			#define PULSE_PORT_DIR		MOTOR_PORT2_DIR
+		#elif PULSE_PORT == 3
+			#define PULSE_PORT_SET		MOTOR_PORT3_SET
+			#define PULSE_PORT_CLEAR	MOTOR_PORT3_CLR
+			#define PULSE_PORT_DIR		MOTOR_PORT3_DIR
+		#else
+			#define PULSE_PORT_SET		MOTOR_PORT0_SET
+			#define PULSE_PORT_CLEAR	MOTOR_PORT0_CLR
+			#define PULSE_PORT_DIR		MOTOR_PORT0_DIR
+		#endif
+		
+		#if DIR_PORT == 1
+			#define DIR_PORT_SET		MOTOR_PORT1_SET
+			#define DIR_PORT_CLEAR		MOTOR_PORT1_CLR
+			#define DIR_PORT_DIR		MOTOR_PORT1_DIR
+		#elif DIR_PORT == 2
+			#define DIR_PORT_SET		MOTOR_PORT2_SET
+			#define DIR_PORT_CLEAR		MOTOR_PORT2_CLR
+			#define DIR_PORT_DIR		MOTOR_PORT2_DIR
+		#elif DIR_PORT == 3
+			#define DIR_PORT_SET		MOTOR_PORT3_SET
+			#define DIR_PORT_CLEAR		MOTOR_PORT3_CLR
+			#define DIR_PORT_DIR		MOTOR_PORT3_DIR
+		#else
+			#define DIR_PORT_SET		MOTOR_PORT0_SET
+			#define DIR_PORT_CLEAR		MOTOR_PORT0_CLR
+			#define DIR_PORT_DIR		MOTOR_PORT0_DIR		
+		#endif		
+	#endif
+/**#########################################################################################*/	
+#endif
